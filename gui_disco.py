@@ -131,7 +131,7 @@ def disco():
     # result_area.see(tk.END)
     # result_area.update_idletasks()
 
-    process_area.insert(tk.END, " --- DISCO Finished .....\n\n")
+    process_area.insert(tk.END, " --- Finished .....\n\n")
     process_area.see(tk.END)
     process_area.update_idletasks()
 
@@ -140,14 +140,14 @@ if __name__ == '__main__':
     print("\nLoading Google pre-trained Word2Vec ......\n")
     pretrained_model = KeyedVectors.load_word2vec_format('pretrained-word2vec/GoogleNews-vectors-negative300.bin', binary=True)
 
-    print("\nStarting GUI of DISCO ......\n")
+    print("\nStarting GUI ......\n")
     root = tk.Tk()
     root.geometry('1520x680')
-    root.title("DISCO")
+    root.title("Disinformation Detection for News Article")
     root.columnconfigure(0, weight=1)
     root.rowconfigure(0, weight=0)
 
-    ttk.Label(root, text="DISCO: Comprehensive and Explainable Disinformation Detection", font=("Times New Roman", 18), justify="center").grid(column=0, row=0, columnspan=2)
+    ttk.Label(root, text="Disinformation Detection for News Article", font=("Times New Roman", 18), justify="center").grid(column=0, row=0, columnspan=2)
 
     ttk.Label(root, text="Enter your articles :", font=("Bold", 12)).grid(column=0, row=1)
     text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=90, height=25, font=("Times New Roman", 15))
